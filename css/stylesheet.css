@@ -4,9 +4,22 @@ h1 {
 }
 
 .larger {
-  font-size: 24px;
+  font-size: 18px;
 }
 
 .center {
   text-align: center;
+}
+
+body {
+  background: #172B61;
+  color: #FFE9B8;
+}
+
+.btn {
+  background: #D074A3;
+}
+
+.btn:hover {
+  background:#B0487D;
 }

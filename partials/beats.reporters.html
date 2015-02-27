@@ -2,18 +2,18 @@
 <div class="col-md-6">
   <div ng-show="beat.reporters.length" class="col-md-12">
     <h2>Reporters working for {{ beat.name }}</h2>
-     <ul class="list-unstyled">
+    <ul class="list-unstyled">
        <li ng-repeat="item in beat.reporters">
-         <h4><span ng-click="show = ! show">{{item.name}}</span></h4>
-         <div class="reporterDetails" ng-show="show">
-           <p>Years working on this beat: {{item.years}}</p>
-           <p>Reporters date of birth: {{item.dob}}</p>
-         </div>
-       </li>
-     </div>
+       <h4><span ng-click="show = ! show">{{item.name}}</span></h4>
+        <div class="reporterDetails" ng-show="show">
+          <p>Years working on this beat: {{item.years}}</p>
+          <p>Reporters date of birth: {{item.dob}}</p>
+        </div>
+      </li>
     </ul>
   </div>
-</div>
+
+
   <div class="col-md-12">
     <span ng-click="showAddReporter = true" class="btn btn-primary">Add Reporter!</span>
 
@@ -34,4 +34,3 @@
     </span>
   </div>
 </div>
-<div ui-view> </div>

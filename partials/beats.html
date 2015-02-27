@@ -1,11 +1,19 @@
 <h1 class="center">Epicodus News</h1>
 
 <div class="col-md-6">
+  <div class="col-md-12">
+    <form class="form-inline" role="form">
+      <div class="form-group">
+        <input ng-model="query" type="text" class="form-control" placeholder="Search for Beats">
+      </div>
+    </form>
+  </div>
+
   <div ng-show="beats.length">
     <div class="col-md-12">
       <h2>Sweet Beats<h2>
       <ul class="list-unstyled">
-        <li ng-repeat="item in beats">
+        <li ng-repeat="item in beats | filter:query">
           <span class="larger"><a ui-sref="beats.reporters({ beatId: item.id })">{{ item.name }}</a></span>
         </li>
       </ul>
@@ -13,7 +21,7 @@
   </div>
 
   <div class="col-md-12">
-    <span ng-click="showAddBeat = true" class="btn btn-primary">Submit Beat!</span>
+    <span ng-click="showAddBeat = true" class="btn btn-primary">Click here to create a Beat!</span>
 
     <span ng-show="showAddBeat" ng-submit="showAddBeat = false">
       <h3>Add a new beat!</h3>
