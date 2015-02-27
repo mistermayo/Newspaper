@@ -6,15 +6,15 @@ newsPaper.config(function($stateProvider) {
     templateUrl: "partials/home.html"
   });
 
-//   $stateProvider.state('courses', {
-//     url: "/courses",
-//     templateUrl: "partials/courses.html",
-//     controller: 'CoursesCtrl'
-//   });
-//
-//   $stateProvider.state('courses.students', {
-//     url: "/:courseId",
-//     templateUrl: "partials/courses.students.html",
-//     controller: 'StudentsCtrl'
-//   });
-// });
+  $stateProvider.state('beats', {
+    url: "/beats",
+    templateUrl: "partials/beats.html",
+    controller: 'BeatsCtrl'
+  });
+
+  $stateProvider.state('beats.reporters', {
+    url: "/:beatId",
+    templateUrl: "partials/beats.reporters.html",
+    controller: 'ReportersCtrl'
+  });
+});
