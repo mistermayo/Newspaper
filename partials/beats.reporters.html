@@ -1,0 +1,31 @@
+<div class="col-md-6">
+  <div ng-show="beat.reporters.length" class="col-md-12">
+    <h2>Reporters working for this {{ beat.name }}</h2>
+    <ul class="list-unstyled">
+      <li ng-repeat="item in beat.reporters">
+        <span class="larger">
+        {{ item.name }}
+      </li>
+    </ul>
+  </div>
+
+  <div class="col-md-12">
+    <span ng-click="showAddReporter = true" class="btn btn-primary">Add new reporter</span>
+
+    <span ng-show="showAddReporter" ng-submit="showAddReporter = false">
+      <h2>Add a reporter to {{ beat.name }}</h2>
+      <form ng-submit="addReporter()" class="form-inline" role="form">
+        <div class="form-group">
+          <input type="text" ng-model="reporterName" class="form-control" placeholder="What's your name">
+        </div>
+        <div class="form-group">
+          <input type="date" ng-model="reporterDob" class="form-control" placeholder="Enter your date of birth">
+        </div>
+        <div class="form-group">
+          <input type="number" ng-model="reporterYears" class="form-control" placeholder="How many years have you worked here?">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+    </span>
+  </div>
+</div>
