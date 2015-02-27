@@ -1,0 +1,12 @@
+h1 {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 60px;
+}
+
+.larger {
+  font-size: 24px;
+}
+
+.center {
+  text-align: center;
+}

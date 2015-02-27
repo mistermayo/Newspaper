@@ -7,5 +7,6 @@ newsPaper.factory('BeatsFactory', function BeatsFactory() {
                          reporters: [] });
     factory.beatName = null;
   };
+
   return factory;
 });

@@ -1,13 +1,15 @@
 <h1 class="center">Epicodus News</h1>
 
-<div class="col-md-12">
+<div class="col-md-6">
   <div ng-show="beats.length">
-      <h2>Check Out These Beats!<h2>
-      <ul>
+    <div class="col-md-12">
+      <h2>Sweet Beats<h2>
+      <ul class="list-unstyled">
         <li ng-repeat="item in beats">
-          <span class="larger"><a ui-sref="beats.reporters({ beatID: item.id })">{{item.name}}</a></span>
+          <span class="larger"><a ui-sref="beats.reporters({ beatId: item.id })">{{ item.name }}</a></span>
         </li>
       </ul>
+    </div>
   </div>
 
   <div class="col-md-12">
@@ -23,4 +25,6 @@
       </form>
     </span>
   </div>
+</div>
+
 <div ui-view> </div>
